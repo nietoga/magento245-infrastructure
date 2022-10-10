@@ -29,6 +29,8 @@ services:
       ## Selenium support, replace "magento.test" with URL of your site
       #- "magento.test:172.17.0.1"
 
+    networks:
+      - global_network
   phpfpm:
     image: markoshust/magento-php:8.1-fpm-1
     volumes: *appvolumes
@@ -100,3 +102,7 @@ volumes:
   rabbitmqdata:
   sockdata:
   ssldata:
+
+networks:
+  global_network:
+    external: true
