@@ -10,6 +10,6 @@ services:
 
   ssh:
     image: markoshust/ssh
-    ports:
+    # ports:
       # - "22:22"
     volumes: *appvolumes
