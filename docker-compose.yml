@@ -29,6 +29,7 @@ services:
       ## Selenium support, replace "magento.test" with URL of your site
       #- "magento.test:172.17.0.1"
 
+      - ./mnt/app/default.conf:/etc/nginx/conf.d/default.conf # To modify that shitty "https only" setup
     networks:
       - global_network
       - magento245_network
